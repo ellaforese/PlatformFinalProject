@@ -6,7 +6,7 @@ import OpeningScreen from './OpeningScreen';
 import HomeProfile from './HomeProfile';
 import SongList from './SongList';
 import SongDetails from './SongDetails';
-
+import PhotoTaker from './PhotoTaker';
 
 const Stack = createNativeStackNavigator();
 //const Navigator = NavigationContainer();
@@ -14,12 +14,13 @@ const Stack = createNativeStackNavigator();
 export default function App() {
   return (
     <NavigationContainer>
-       <Stack.Navigator initialRouteName='OpeningScreen'> 
-       <Stack.Screen name='Welcome' component={OpeningScreen} />
-       <Stack.Screen name='Home' component={HomeProfile} />
-       <Stack.Screen name='Find Songs' component={SongList} /> 
-       <Stack.Screen name="Song Details" component={SongDetails} />
-       </Stack.Navigator>    
+      <Stack.Navigator initialRouteName='OpeningScreen'>
+        <Stack.Screen name='Welcome' component={OpeningScreen} />
+        <Stack.Screen name='Home' component={HomeProfile} />
+        <Stack.Screen name='Find Songs' component={SongList} />
+        <Stack.Screen name="Song Details" component={SongDetails} />
+        <Stack.Screen name="take a photo" component={PhotoTaker} />
+      </Stack.Navigator>
     </NavigationContainer>
   );
 }
