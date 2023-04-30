@@ -3,9 +3,9 @@ import { StyleSheet, Text, View, Image } from 'react-native';
 import { Camera, CameraType } from 'expo-camera';
 import * as MediaLibrary from 'expo-media-library';
 import Button from './src/components/Button';
-import ImageUpload from './ImageUpload';
+import ImageUpload from './ImageUploader';
 
-export default function PhotoTaker() {
+export default function App() {
     const [hasCameraPermission, setHasCameraPermission] = useState(null);
     const [image, setImage] = useState(null);
     const [type, setType] = useState(Camera.Constants.Type.back);
@@ -31,6 +31,7 @@ export default function PhotoTaker() {
             }
         }
     }
+
     const saveImage = async () => {
         if (image) {
             try {
@@ -106,6 +107,8 @@ const styles = StyleSheet.create({
     camera: {
         flex: 1,
         borderRadius: 20,
-
     }
 });
+
+
+

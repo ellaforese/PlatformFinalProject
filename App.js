@@ -7,6 +7,10 @@ import HomeProfile from './HomeProfile';
 import SongList from './SongList';
 import SongDetails from './SongDetails';
 import PhotoTaker from './PhotoTaker';
+import ProfilePicture from './ImageUploader';
+import ProfileScreen from './ImageUploader';
+
+//had to install this: npm install react-native-image-picker
 
 const Stack = createNativeStackNavigator();
 //const Navigator = NavigationContainer();
@@ -19,7 +23,9 @@ export default function App() {
         <Stack.Screen name='Home' component={HomeProfile} />
         <Stack.Screen name='Find Songs' component={SongList} />
         <Stack.Screen name="Song Details" component={SongDetails} />
-        <Stack.Screen name="take a photo" component={PhotoTaker} />
+        <Stack.Screen name='Profile Photo' component={PhotoTaker} />
+        <Stack.Screen name='Upload Picture' component={ProfileScreen} />
+
       </Stack.Navigator>
     </NavigationContainer>
   );
