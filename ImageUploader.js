@@ -52,7 +52,7 @@ const ProfileScreen = () => {
         <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
             <TouchableOpacity onPress={openImagePicker}>
                 {profilePic ? (
-                    <Image source={profilePic} style={{ width: 200, height: 200, borderRadius: 100 }} />
+                    <Image source={profilePic} style={{ width: 200, height: 200, borderRadius: 100}} />
                 ) : (
                     <View style={{ width: 200, height: 200, borderRadius: 100, backgroundColor: 'gray' }} />
                 )}
