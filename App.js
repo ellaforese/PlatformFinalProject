@@ -18,7 +18,7 @@ export default function App() {
         <Stack.Screen name='Profile Photo' component={PhotoTaker} />
         <Stack.Screen name='Upload Picture' component={ProfileScreen} />
         <Stack.Screen name='Search' component={SearchScreen} />
-        <Stack.Screen name='Play Song' component={PlaySongScreen} /> 
+        <Stack.Screen name='Play Song' component={PlaySongScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

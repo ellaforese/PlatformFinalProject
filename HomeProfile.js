@@ -46,7 +46,7 @@ export default function HomeProfile({ navigation }) {
   return (
 
     <View style={styles.container}>
-     <ScrollView>
+      <ScrollView>
         <View style={styles.headphoneContainer}>
           <Image source={require('./headphones.jpeg')}
             style={{ width: 98, height: 90 }}
@@ -76,19 +76,19 @@ export default function HomeProfile({ navigation }) {
           <Text style={[styles.words, { textAlign: 'center' }]}>Upload Picture!</Text>
         </TouchableOpacity>
 
-    <View style={styles.imgContainer}>
-      {imageUri && (
-     <Image source={{ uri: imageUri }} style={styles.imgStyle} />
-      )}
-    </View>
-        
+        <View style={styles.imgContainer}>
+          {imageUri && (
+            <Image source={{ uri: imageUri }} style={styles.imgStyle} />
+          )}
+        </View>
+
 
         <TouchableOpacity onPress={() => navigation.navigate('Search')}>
           <Text style={[styles.title, { textAlign: 'center' }]}>Search For Songs</Text>
         </TouchableOpacity>
-      
+
         <View style={styles.listContainer1}>
-          
+
           <Text style={[styles.words, { textAlign: 'left' }]}> Songs You Liked:</Text>
           <View style={styles.text}>
             <TextInput
@@ -97,12 +97,12 @@ export default function HomeProfile({ navigation }) {
               maxLength={50}
               onSubmitEditing={(event) => addSong(event.nativeEvent.text)}
             />
-               {songs.map((song, index) => (
-                <Text style={styles.listItem} key={index}>
-                  {song}
-                </Text>
-                   ))}
-          
+            {songs.map((song, index) => (
+              <Text style={styles.listItem} key={index}>
+                {song}
+              </Text>
+            ))}
+
           </View>
         </View>
 
@@ -117,12 +117,12 @@ export default function HomeProfile({ navigation }) {
             />
 
             {artists.map((artist, index) => (
-            <Text style={styles.listItem} key={index}>
-              {artist}
+              <Text style={styles.listItem} key={index}>
+                {artist}
               </Text>
-          ))}
-            
-              {/* i origionally used a flatlist, but had issues with the styling so switched to using a map */}
+            ))}
+
+            {/* i origionally used a flatlist, but had issues with the styling so switched to using a map */}
             {/* <View>
               <FlatList
                 data={artists}
@@ -150,19 +150,19 @@ const styles = StyleSheet.create({
   name:
   {
     fontSize: 40,
-    fontFamily: 'Georgia-Bold',
+    //fontFamily: 'Georgia-Bold',
 
   },
   title: {
     fontSize: 30,
-    fontFamily: 'Georgia-Bold',
+    //fontFamily: 'Georgia-Bold',
   },
   words:
   {
     marginTop: 2.5,
     marginBottom: 2.5,
     fontSize: 20,
-    fontFamily: 'Georgia-Bold',
+    //fontFamily: 'Georgia-Bold',
   },
 
   imgContainer:
@@ -181,7 +181,7 @@ const styles = StyleSheet.create({
     height: 200,
     width: 200,
     alignSelf: 'center',
-    
+
   },
 
   headphoneContainer: {
